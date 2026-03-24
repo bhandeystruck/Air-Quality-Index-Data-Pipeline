@@ -1,0 +1,23 @@
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Docker & Infrastructure
+infra/minio_data/
+airflow/logs/
+airflow/plugins/
+
+# IDEs
+.vscode/
+.idea/
+
+# dbt (Future Proofing)
+dbt/dbt_packages/
+dbt/target/

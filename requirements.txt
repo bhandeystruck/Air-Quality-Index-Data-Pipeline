@@ -1,0 +1,14 @@
+# Orchestration & Ingestion
+apache-airflow==2.8.1
+apache-airflow-providers-snowflake
+apache-airflow-providers-amazon  # For MinIO (S3 compatible)
+requests
+boto3
+
+# Transformation
+dbt-snowflake
+
+# Serving
+streamlit
+snowflake-connector-python
+pandas
