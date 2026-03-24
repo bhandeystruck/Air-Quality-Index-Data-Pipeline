@@ -1,14 +1,15 @@
-# Orchestration & Ingestion
-apache-airflow==2.8.1
-apache-airflow-providers-snowflake
-apache-airflow-providers-amazon  # For MinIO (S3 compatible)
+# --- Orchestration & Ingestion ---
+apache-airflow
+apache-airflow-providers-amazon  # Required for Airflow to talk to MinIO/S3
 requests
 boto3
+tenacity                        # For robust API retries
+python-dotenv                   # To load our .env file
 
-# Transformation
-dbt-snowflake
+# --- Transformation (The New Analytical Core) ---
+dbt-duckdb                      # Replaces dbt-snowflake
+duckdb                          # The engine itself
 
-# Serving
-streamlit
-snowflake-connector-python
-pandas
+# --- Serving & Analysis ---
+streamlit                       # For the Gold-layer dashboard
+pandas                          # For data manipulation in Streamlit
